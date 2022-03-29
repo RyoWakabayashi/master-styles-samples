@@ -1,0 +1,17 @@
+{
+  "name": "master-styles-samples",
+  "version": "1.0.0",
+  "description": "Master Styles samples",
+  "repository": "git@github.com:RyoWakabayashi/master-styles-samples.git",
+  "author": "Ryo Wakabayashi <gfdmkm573@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": { },
+  "scripts": {
+    "prepare": "bash -c \"cp ./git_hooks/commit-msg ./.git/hooks/\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1"
+  }
+}
