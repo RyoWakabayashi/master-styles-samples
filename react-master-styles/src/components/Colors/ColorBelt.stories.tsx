@@ -8,7 +8,12 @@ export default {
 
 const Template: Story<ColorBeltProps> = (args) => <ColorBelt {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
-  colorName: 'black'
+export const Red = Template.bind({})
+Red.args = {
+  colorName: 'red'
+}
+
+export const Blue = Template.bind({})
+Blue.args = {
+  colorName: 'blue'
 }
