@@ -21,7 +21,8 @@ export const ColorBelt: React.FC<ColorBeltProps> = (props: ColorBeltProps) => {
           const classNames = [
             'd:flex',
             'flex-grow:1',
-            'h:40 white-space:nowrap',
+            'h:40',
+            'white-space:nowrap',
             'overflow:hidden',
             'd:block:hover>div',
             `background-color:${props.colorName}-${level}`
