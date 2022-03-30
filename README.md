@@ -1,6 +1,6 @@
 # master-styles-samples
 
-Master Styles のサンプル
+[Master Styles][master] のサンプル
 
 ## 環境構築
 
@@ -32,3 +32,5 @@ npm install \
   ```bash
   pre-commit install
   ```
+
+[master]: https://styles.master.co/
