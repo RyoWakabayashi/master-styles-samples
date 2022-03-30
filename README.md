@@ -6,7 +6,8 @@ Master Styles のサンプル
 
 ```bash
 asdf plugin-add nodejs \
-  ; asdf plugin-add python
+  ; asdf plugin-add python \
+  ; asdf plugin-add yarn
 ```
 
 ```bash

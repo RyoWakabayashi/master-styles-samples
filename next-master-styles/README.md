@@ -1,27 +1,27 @@
-# Sample for Nuxt.js
+# Sample for Next.js
 
-Nuxt.js 用サンプル
+Next.js 用サンプル
 
 ## 環境構築
 
 ```bash
-npm install
+yarn
 ```
 
 ## サーバー起動
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## ストーリーブック起動
 
 ```bash
-npm run storybook
+yarn storybook
 ```
 
 ## Lint
 
 ```bash
-npm run lint
+yarn lint
 ```
