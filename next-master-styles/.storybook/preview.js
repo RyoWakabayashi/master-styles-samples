@@ -1,3 +1,6 @@
+import '@master/normal.css'
+import '@master/styles'
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {

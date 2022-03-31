@@ -8,16 +8,21 @@
     </div>
     <div class="d:flex flex:row overflow:hidden r:3">
       <div
-        v-for="(level, index) in levelArray"
-        v-show="index > 0"
-        :key="index"
-        :class="[levelClass, 'background-color:' + colorName + '-' + index]"
+        v-for="level in levels"
+        :key="level"
+        :class="[levelClass, 'background-color:' + colorName + '-' + level]"
       />
     </div>
   </div>
 </template>
 
 <script>
+
+const levels = Array
+  .from({ length: 100 })
+  .map((_, level) => level)
+  .filter(level => level > 0)
+
 export default {
   name: 'color-belt',
   props: {
@@ -36,7 +41,7 @@ export default {
         'overflow:hidden': true,
         'd:block:hover>div': true
       },
-      levelArray: Array.from({ length: 100 })
+      levels
     }
   }
 }

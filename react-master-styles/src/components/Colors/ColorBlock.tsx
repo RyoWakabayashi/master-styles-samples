@@ -1,5 +1,4 @@
 import React from 'react'
-import '@master/styles'
 
 export interface ColorBlockProps {
   colorName: string

@@ -51,5 +51,8 @@ export default {
 
   // nuxtjs/storybook
   storybook: {
+    addons: [
+      '@storybook/addon-essentials'
+    ]
   }
 }

@@ -1,5 +1,13 @@
+import Colors from './Colors.vue'
+
 export default {
-  title: 'Colors'
+  title: 'Colors',
+  component: Colors
 }
 
-export const Default = () => '<Colors />'
+const Template = () => ({
+  components: { Colors },
+  template: '<colors />'
+})
+
+export const Default = Template.bind({})

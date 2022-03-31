@@ -1,11 +1,15 @@
 import React from 'react'
-import '@master/styles'
 
 export interface ColorBeltProps {
   colorName: string
 }
 
 export const ColorBelt: React.FC<ColorBeltProps> = (props: ColorBeltProps) => {
+  const levels = Array
+    .from({ length: 100 })
+    .map((_, level) => level)
+    .filter(level => level > 0)
+
   return (
     <div>
       <div className='p:10;0 d:flex align-items:center'>
@@ -16,8 +20,7 @@ export const ColorBelt: React.FC<ColorBeltProps> = (props: ColorBeltProps) => {
       </div>
       <div className='d:flex flex:row overflow:hidden r:3'>
         {
-        Array.from({ length: 100 }).map((_, level) => {
-          if (level === 0) return (<></>)
+        levels.map(level => {
           const classNames = [
             'd:flex',
             'flex-grow:1',

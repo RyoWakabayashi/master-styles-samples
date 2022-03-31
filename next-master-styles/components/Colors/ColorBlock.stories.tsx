@@ -1,9 +1,18 @@
+import { Style } from '@master/style'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { ColorBlock } from './ColorBlock'
 
+const colors = Object.keys(Style.colors)
+
 export default {
   component: ColorBlock,
-  title: 'Colors/ColorBlock'
+  title: 'Colors/ColorBlock',
+  argTypes: {
+    colorName: {
+      control: { type: 'select' },
+      options: colors
+    }
+  }
 } as ComponentMeta<typeof ColorBlock>
 
 const Template: ComponentStory<typeof ColorBlock> = (args) => <ColorBlock {...args} />

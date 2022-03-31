@@ -1,8 +1,17 @@
+import { Style } from '@master/style'
 import ColorBlock from './ColorBlock.vue'
 
+const colors = Object.keys(Style.colors)
+
 export default {
-  title: 'ColorBlock',
-  component: ColorBlock
+  title: 'Colors/ColorBlock',
+  component: ColorBlock,
+  argTypes: {
+    colorName: {
+      control: { type: 'select' },
+      options: colors
+    }
+  }
 }
 
 const Template = (args) => ({
