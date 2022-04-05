@@ -2,6 +2,7 @@ import React from 'react'
 import { Style } from '@master/style'
 import { ColorBlock } from './ColorBlock'
 import { ColorBelt } from './ColorBelt'
+import { OpacityDemo } from './OpacityDemo'
 
 export const Colors: React.FC = () => {
   const colors = Object.keys(Style.colors)
@@ -40,6 +41,9 @@ export const Colors: React.FC = () => {
               )
             })
         }
+      </div>
+      <div className='mt:2rem'>
+        <OpacityDemo />
       </div>
     </div>
   )
