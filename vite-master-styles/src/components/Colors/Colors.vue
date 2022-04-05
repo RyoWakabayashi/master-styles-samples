@@ -17,6 +17,9 @@
         :color-name="color"
       />
     </div>
+    <div class="mt:2rem">
+      <OpacityDemo />
+    </div>
   </div>
 </template>
 
@@ -24,6 +27,7 @@
 import { Style } from '@master/style'
 import ColorBlock from './ColorBlock.vue'
 import ColorBelt from './ColorBelt.vue'
+import OpacityDemo from './OpacityDemo.vue'
 
 const colors = Object.keys(Style.colors)
 const beltColors = colors.filter(color => !Style.singleColors.includes(color))
@@ -32,7 +36,8 @@ export default {
   name: 'Colors',
   components: {
     ColorBlock,
-    ColorBelt
+    ColorBelt,
+    OpacityDemo
   },
   data: () => {
     return {

@@ -2,6 +2,7 @@
   import { Style } from '@master/style';
   import ColorBlock from "./ColorBlock.svelte";
   import ColorBelt from "./ColorBelt.svelte";
+  import OpacityDemo from "./OpacityDemo.svelte";
 
   const colors = Object.keys(Style.colors)
   const beltColors = colors.filter(color => !Style.singleColors.includes(color))
@@ -28,5 +29,8 @@
         colorName={color}
       />
     {/each}
+  </div>
+  <div class="mt:2rem">
+    <OpacityDemo />
   </div>
 </div>

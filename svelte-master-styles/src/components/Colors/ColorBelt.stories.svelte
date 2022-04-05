@@ -10,7 +10,7 @@
 
 <Meta
   title="Colors/ColorBelt"
-  component={ColorBelt},
+  component={ColorBelt}
   argTypes={{
     colorName: {
       control: { type: 'select' },

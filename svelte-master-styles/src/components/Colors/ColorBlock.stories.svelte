@@ -8,7 +8,7 @@
 
 <Meta
   title="Colors/ColorBlock"
-  component={ColorBlock},
+  component={ColorBlock}
   argTypes={{
     colorName: {
       control: { type: 'select' },
