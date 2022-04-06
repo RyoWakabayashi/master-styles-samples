@@ -22,7 +22,7 @@
 <div>
   <div class='p:10;0 d:flex align-items:center'>
     <div class='mt:5 d:flex align-items:center'>
-      <svg class={`w:16 h:16 mr:8 background-color:${colorName}`} />
+      <svg class="w:16 h:16 mr:8 background-color:{colorName}" />
       <span class='f:semibold'>{colorName}</span>
     </div>
   </div>

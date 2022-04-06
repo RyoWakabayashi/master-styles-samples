@@ -7,7 +7,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from '@master/normal.css'
+import normal from '@master/normal.css'
+import keyframes from '@master/keyframes.css'
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -18,7 +19,8 @@ export const meta: MetaFunction = () => ({
 // add styles to links
 export const links: LinksFunction = () => {
   return [
-      { rel: "stylesheet", href: styles },
+      { rel: "stylesheet", href: normal },
+      { rel: "stylesheet", href: keyframes },
   ];
 };
 

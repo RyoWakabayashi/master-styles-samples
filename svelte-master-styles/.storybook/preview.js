@@ -1,5 +1,7 @@
-import '@master/normal.css'
+
 import '@master/styles'
+import '@master/normal.css'
+import '@master/keyframes.css'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

@@ -5,7 +5,7 @@ import { ColorBelt } from './ColorBelt'
 import { OpacityDemo } from './OpacityDemo'
 
 export const Colors: React.FC = () => {
-  const [colors, setColors] = useState([])
+  const [colors, setColors] = useState([''])
 
   useEffect(() => {
     setColors(Object.keys(Style.colors))
@@ -20,7 +20,7 @@ export const Colors: React.FC = () => {
   return (
     <div className={classNames}>
       <h2 className='font:32 font:heavy font:italic m:10'>Colors</h2>
-      <div className='grid-cols:3 grid-cols:5@md gap:15'>
+      <div className='m:16 grid-cols:3 grid-cols:5@md gap:15'>
         {
           colors.map((color, index) => {
             return (
@@ -32,7 +32,7 @@ export const Colors: React.FC = () => {
           })
         }
       </div>
-      <div className='grid-cols:1 gap:10'>
+      <div className='m:16 grid-cols:1 gap:10'>
         {
           colors
             .filter(color => !Style.singleColors.includes(color))

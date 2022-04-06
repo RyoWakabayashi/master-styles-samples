@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { OpacityButton } from './OpacityButton'
+import { DEMO } from '../../classes/demo'
 
 export const OpacityDemo: React.FC = () => {
   const opacities = [
@@ -22,20 +23,6 @@ export const OpacityDemo: React.FC = () => {
     `${blockClassNamePrefix} background-color:blue/${currentOpacity}!`
   )
 
-  const demoClassName = [
-    'position:relative',
-    'd:flex',
-    'flex:wrap',
-    'justify-content:center',
-    'align-items:center',
-    'contain:content',
-    'width:full',
-    'p:2rem',
-    'm:0.625rem',
-    'r:0.3125rem',
-    'background-color:black'
-  ].join(' ')
-
   useEffect(() => {
     setBlockClassName(`${blockClassNamePrefix} background-color:blue/${currentOpacity}!`)
   }, [blockClassNamePrefix, currentOpacity])
@@ -56,7 +43,7 @@ export const OpacityDemo: React.FC = () => {
           })
         }
       </div>
-      <div className={demoClassName}>
+      <div className={DEMO}>
         <div className={blockClassName}>
           <code className='f:14 font-color:inherit!'>
             background-color:blue/{currentOpacity}
