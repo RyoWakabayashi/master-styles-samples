@@ -1,15 +1,21 @@
 import React from 'react'
-import './App.css'
-import { Colors } from './components/Colors'
+import {
+  BrowserRouter
+  , Routes
+  , Route
+} from 'react-router-dom'
+import { ColorsPage } from './pages/ColorsPage'
+import { AnimationsPage } from './pages/AnimationsPage'
 
 const App: React.FC = () => {
   return (
-    <div className='app'>
-      <h1 className='font:40 font:heavy font:italic m:50 text:center'>
-        Hello Master Styles
-      </h1>
-      <Colors />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<ColorsPage />} />
+        <Route path='/colors' element={<ColorsPage />} />
+        <Route path='/animations' element={<AnimationsPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

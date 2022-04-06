@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { OpacityDemo } from './OpacityDemo'
 
 export default {
@@ -6,6 +6,6 @@ export default {
   title: 'Colors/OpacityDemo'
 } as ComponentMeta<typeof OpacityDemo>
 
-const Template: Story = () => <OpacityDemo />
+const Template: ComponentStory<typeof OpacityDemo> = () => <OpacityDemo />
 
 export const Default = Template.bind({})

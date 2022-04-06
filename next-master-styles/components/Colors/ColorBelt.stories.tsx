@@ -15,7 +15,7 @@ export default {
       options: colors
     }
   }
-} as ComponentMeta<typeof ColorBelt>;
+} as ComponentMeta<typeof ColorBelt>
 
 const Template: ComponentStory<typeof ColorBelt> = (args) => <ColorBelt {...args} />
 

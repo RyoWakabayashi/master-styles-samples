@@ -1,5 +1,6 @@
 <script>
   import OpacityButton from "./OpacityButton.svelte";
+  import { DEMO } from "../../classes/demo.js";
 
   const opacities = [
     "0",
@@ -10,20 +11,6 @@
   ];
   let currentOpacity = '.5';
   let blockClassName;
-
-  const demoClassName = [
-    "position:relative",
-    "d:flex",
-    "flex:wrap",
-    "justify-content:center",
-    "align-items:center",
-    "contain:content",
-    "width:full",
-    "p:2rem",
-    "m:0.625rem",
-    "r:0.3125rem",
-    "background-color:black"
-  ].join(" ");
 
   const setOpacity = (value) => {
     currentOpacity = value;
@@ -53,7 +40,7 @@
       />
     {/each}
   </div>
-  <div class={demoClassName}>
+  <div class={DEMO}>
     <div class={blockClassName}>
       <code class="f:14 font-color:inherit!">
         background-color:blue/{currentOpacity}

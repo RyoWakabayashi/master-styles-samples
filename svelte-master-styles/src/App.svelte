@@ -1,10 +1,8 @@
 <script>
-  import Colors from "./components/Colors/Colors.svelte"
+  import Router from 'svelte-spa-router'
+  import { routes } from './router'
 </script>
 
 <main>
-  <h1 class="font:40 font:heavy font:italic m:50 text:center">
-    Hello Master Styles
-  </h1>
-  <Colors />
+  <Router {routes} />
 </main>

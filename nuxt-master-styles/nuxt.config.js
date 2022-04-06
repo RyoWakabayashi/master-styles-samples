@@ -24,11 +24,24 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@master/normal.css',
+    '@master/keyframes.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/masterStyles'
   ],
+
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: '',
+        path: '/',
+        component: resolve(__dirname, 'pages/colors/index.vue')
+      })
+    }
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

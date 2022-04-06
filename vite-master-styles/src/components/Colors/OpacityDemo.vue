@@ -11,8 +11,8 @@
         :on-click="() => setOpacity(opacity)"
       />
     </div>
-    <div :class="demoClassName">
-      <div :class="blockClassNamePrefix + ' background-color:blue/' + currentOpacity">
+    <div :class="DEMO">
+      <div :class="blockClassName">
         <code class="f:14 font-color:inherit!">
           background-color:blue/{{ currentOpacity }}
         </code>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { DEMO } from '../../classes/demo.js'
 import OpacityButton from './OpacityButton.vue'
 
 const opacities = [
@@ -41,20 +42,6 @@ const blockClassNamePrefix = [
   'p:5;15'
 ].join(' ')
 
-const demoClassName = [
-  'position:relative',
-  'd:flex',
-  'flex:wrap',
-  'justify-content:center',
-  'align-items:center',
-  'contain:content',
-  'width:full',
-  'p:2rem',
-  'm:0.625rem',
-  'r:0.3125rem',
-  'background-color:black'
-].join(' ')
-
 export default {
   name: 'OpacityDemo',
   components: {
@@ -63,9 +50,13 @@ export default {
   data: () => {
     return {
       opacities,
-      demoClassName,
-      blockClassNamePrefix,
+      DEMO,
       currentOpacity: '.5'
+    }
+  },
+  computed: {
+    blockClassName () {
+      return blockClassNamePrefix + ' background-color:blue/' + this.currentOpacity
     }
   },
   methods: {
