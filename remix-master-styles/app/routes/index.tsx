@@ -1,3 +1,1 @@
-import { ColorsPage } from './colors/ColorsPage'
-
-export default ColorsPage
+export { ColorsPage as default } from './colors/ColorsPage'
