@@ -7,20 +7,16 @@ import { MAIN_CONTENT } from '../../classes/mainContent'
 
 export const ColorsPage: React.FC = () => {
   const refArray = useRef([] as number[])
-  // const [stateArray, setStateArray] = useState([] as number[])
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     refArray.current.push(count)
     refArray.current.sort((a, b) => a - b)
-    // const tmpArray = [...stateArray, count]
-    // tmpArray.sort((a, b) => a - b)
-    // setStateArray(tmpArray)
+    console.log(refArray.current)
   }, [count])
 
   useEffect(() => {
     refArray.current = []
-    // setStateArray([])
     Array(3).fill(0).map((_, index) => {
       setTimeout(() => {
         Array(100).fill(0).map((_, sub) => {
