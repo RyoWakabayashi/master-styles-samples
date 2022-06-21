@@ -7,7 +7,7 @@ import { MAIN_CONTENT } from '../../classes/mainContent'
 
 export const ColorsPage: React.FC = () => {
   const refArray = useRef([] as number[])
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(999)
 
   useEffect(() => {
     refArray.current.push(count)
@@ -21,7 +21,7 @@ export const ColorsPage: React.FC = () => {
       setTimeout(() => {
         Array(100).fill(0).map((_, sub) => {
           setTimeout(() => {
-            setCount(sub)
+            setCount(index * 100 + sub)
           }, 1)
           return sub
         })
